@@ -39,10 +39,9 @@ Before we can implement the CRUD operations, we need to set up a Spring Boot pro
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-validation</artifactId>
     </dependency>
-    <dependency>
-        <groupId>com.h2database</groupId>
-        <artifactId>h2</artifactId>
-        <scope>runtime</scope>
+   <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
     </dependency>
 </dependencies>
 ```
@@ -234,12 +233,16 @@ In the `application.properties` or `application.yml` file, you define the databa
 #### **Example: `application.properties` (H2 Database)**
 
 ```properties
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=password
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-spring.jpa.hibernate.ddl-auto=update
+spring.application.name=tseting
+
+spring.datasource.url=jdbc:mysql://localhost:3306/<databasename>
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.username=dbusername
+spring.datasource.password=dbpassword
+
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
 ```
 
 This example uses an H2 in-memory database for testing purposes. For production, you would typically configure a MySQL or PostgreSQL database.
