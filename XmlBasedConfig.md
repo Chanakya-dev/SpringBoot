@@ -184,3 +184,27 @@ In Spring, **Inversion of Control (IoC)** is the principle where the control of 
 
 * **Setter-based DI**: Alternatively, dependencies can be injected via setter methods. For example, instead of using the constructor, we could inject the `Processor` via a setter method like `setProcessor()`.
 
+### 7 Main.java
+```java
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainApp {
+    public static void main(String[] args) {
+        // Load the Spring context from the XML configuration file
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+
+        // Retrieve the Samsung and Lava beans from the context
+        Mobile samsung = (Mobile) context.getBean("samsungMobile");
+        Mobile lava = (Mobile) context.getBean("lavaMobile");
+
+        // Use the beans
+        samsung.makeCall();
+        lava.makeCall();
+
+        // Close the context
+        ((ClassPathXmlApplicationContext) context).close();
+    }
+}
+```
+
