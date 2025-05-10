@@ -1,7 +1,3 @@
-Sure! Below is a **complete example of all CRUD operations (Create, Read, Update, Delete)** using **Hibernate with annotation-based configuration** (no Spring Boot yet).
-
----
-
 ## ✅ Entity Class – `Student.java`
 
 ```java
