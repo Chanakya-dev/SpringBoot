@@ -1,4 +1,4 @@
-### **Spring Boot Annotations**
+## **Spring Boot Annotations**
 
 Spring Boot provides a comprehensive set of annotations to make development easier. These annotations simplify various aspects of the application, from creating RESTful APIs to wiring beans. Here's a breakdown of the annotations you mentioned:
 
