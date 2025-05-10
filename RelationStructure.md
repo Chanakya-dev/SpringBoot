@@ -1,7 +1,3 @@
-Let's extend the **Hospital Management System** to include the **Patient**, **Doctor**, **Beds**, **Canteen**, and **Medical Lab** entities. Below is a breakdown of each entity, the relationships between them, and a basic implementation using **Spring Boot** and **JPA**.
-
----
-
 ## ✅ **Hospital Management System with Extended Entities**
 
 ### **Entities Overview**
